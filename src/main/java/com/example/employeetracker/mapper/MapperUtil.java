@@ -33,6 +33,7 @@ public class MapperUtil {
         dto.setStartDate(lr.getStartDate());
         dto.setEndDate(lr.getEndDate());
         dto.setStatus(lr.getStatus());
+        dto.setReason(lr.getReason());
         dto.setEmployeeId(lr.getEmployee() != null ? lr.getEmployee().getId() : null);
         return dto;
     }

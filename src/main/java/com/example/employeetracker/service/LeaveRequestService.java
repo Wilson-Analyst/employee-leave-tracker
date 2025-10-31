@@ -30,6 +30,7 @@ public class LeaveRequestService {
                 .leaveType(dto.getLeaveType())
                 .startDate(dto.getStartDate())
                 .endDate(dto.getEndDate())
+                .reason(dto.getReason())
                 .status(dto.getStatus() == null ? "PENDING" : dto.getStatus())
                 .employee(e)
                 .build();

@@ -1,6 +1,7 @@
 package com.example.employeetracker.dto;
 
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 import java.time.LocalDate;
@@ -17,6 +18,9 @@ public class LeaveRequestDTO {
 
     @NotNull(message = "endDate required")
     private LocalDate endDate;
+
+    @NotBlank(message = "Reason is required")
+    private String reason;
 
     private String status; // optional, default = PENDING
 

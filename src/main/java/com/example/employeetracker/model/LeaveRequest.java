@@ -30,6 +30,9 @@ public class LeaveRequest {
     @Column(nullable = false)
     private String status = "PENDING";
 
+    @Column(nullable = false)
+    private String reason;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="employee_id", nullable = false)
     private Employee employee;
