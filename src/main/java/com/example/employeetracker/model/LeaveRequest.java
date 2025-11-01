@@ -33,7 +33,7 @@ public class LeaveRequest {
     @Column(nullable = false)
     private String reason;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="employee_id", nullable = false)
     private Employee employee;
 }

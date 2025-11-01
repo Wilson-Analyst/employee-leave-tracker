@@ -1,6 +1,8 @@
 package com.example.employeetracker.controller;
 
 import com.example.employeetracker.dto.LeaveRequestDTO;
+import com.example.employeetracker.model.Employee;
+import com.example.employeetracker.model.LeaveRequest;
 import com.example.employeetracker.service.LeaveRequestService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
