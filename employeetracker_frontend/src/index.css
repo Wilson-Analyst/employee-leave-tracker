@@ -1,0 +1,193 @@
+/* Import a clean modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --primary: #0d6efd; /* bootstrap primary */
+  --accent: #6f42c1;
+  --muted: #6c757d;
+  --text: #212529;
+  --success: #198754;
+  --danger: #dc3545;
+  --table-header: #eef2ff;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* App container helper */
+.app-container {
+  padding: 24px;
+}
+
+/* Navbar */
+nav.app-nav{
+  background: linear-gradient(90deg, rgba(255,255,255,0.7), rgba(255,255,255,0.85));
+  border-radius: 8px;
+  padding: 10px 16px;
+  box-shadow: 0 2px 6px rgba(26,32,44,0.06);
+  margin-bottom: 18px;
+}
+
+nav.app-nav .nav-link{
+  color: var(--text);
+  font-weight: 600;
+  margin-right: 12px;
+}
+
+nav.app-nav .nav-link:hover{
+  color: var(--primary);
+}
+
+/* Sidebar tweaks */
+.sidebar-brand{
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Tables: custom rounded card-like table */
+.table-custom{
+  background: var(--card);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(18,38,63,0.06);
+  border: 1px solid rgba(15,23,42,0.04);
+}
+
+.table-custom thead th{
+  background: linear-gradient(180deg, var(--table-header), #ffffff);
+  color: var(--muted);
+  font-weight: 600;
+  border-bottom: 0;
+  padding: 14px 16px;
+}
+
+.table-custom tbody td{
+  padding: 14px 16px;
+  vertical-align: middle;
+}
+
+.table-custom tbody tr:hover{
+  background: rgba(13,110,253,0.03);
+}
+
+.badge-status{
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.badge-pending{ background: #fff3cd; color: #856404; }
+.badge-approved{ background: #d1e7dd; color: #0f5132; }
+.badge-rejected{ background: #f8d7da; color: #842029; }
+
+/* Buttons: subtle modern look */
+.btn-brand{
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 6px 12px rgba(13,110,253,0.08);
+  border: none;
+}
+.btn-outline-muted{
+  border-radius: 8px;
+  border: 1px solid rgba(33,37,41,0.06);
+  color: var(--muted);
+  background: transparent;
+}
+
+/* Small helpers */
+.card-soft{
+  background: var(--card);
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 6px 18px rgba(18,38,63,0.04);
+}
+
+/* Login page styles */
+.login-page {
+  background: linear-gradient(135deg, #1a237e 0%, #000033 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2.5rem !important;
+  width: 380px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.login-title {
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.login-form label {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.login-form .form-control {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: all 0.2s;
+}
+
+.login-form .form-control:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+}
+
+.login-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.login-btn {
+  background: #3949ab;
+  border: none;
+  font-weight: 600;
+  padding: 0.8rem;
+  transition: all 0.2s;
+}
+
+.login-btn:hover {
+  background: #283593;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive niceties */
+@media (max-width: 768px){
+  .sidebar-brand{ text-align: center; }
+  .app-container{ padding: 12px; }
+  .login-card {
+    width: 90%;
+    margin: 1rem;
+    padding: 2rem !important;
+  }
+}
